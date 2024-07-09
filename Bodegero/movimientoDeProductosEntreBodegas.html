@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento de Productos - Bodeguero</title>
+    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+</head>
+<body>
+    <h1>Movimiento de Productos entre Bodegas</h1>
+    <form action="/move-products" method="post" id="formulario">
+        <label for="OrigenBodega">Bodega de Origen:</label>
+        <input type="text" id="OrigenBodega" name="OrigenBodega" required>
+        <br>
+        <label for="destinoBodega">Bodega de Destino:</label>
+        <input type="text" id="destinoBodega" name="destinoBodega" required>
+        <br>
+        <label for="user">Usuario al realizar operacion:</label>
+        <input type="text" id="user" name="user" required>
+        <br>
+        <label for="Productos">Productos y Cantidades:</label>
+        <textarea id="Productos" name="Productos" required></textarea>
+        <br>
+        <button type="submit">Mover Productos</button>
+    </form>
+    <script src="BodegeroJS/BodegeroScripnt.js"></script>
+</body>
+</html>

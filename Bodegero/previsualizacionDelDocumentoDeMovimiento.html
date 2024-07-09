@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsualización del Documento de Movimiento - Bodeguero</title>
+    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+</head>
+<body>
+    <h1>Previsualización del Documento de Movimiento</h1>
+    <form action="/preview-movement-document" method="post">
+        <label for="originWarehouse">Bodega de Origen:</label>
+        <input type="text" id="originWarehouse" name="originWarehouse" required>
+        <br>
+        <label for="destinationWarehouse">Bodega de Destino:</label>
+        <input type="text" id="destinationWarehouse" name="destinationWarehouse" required>
+        <br>
+        <label for="products">Productos y Cantidades:</label>
+        <textarea id="products" name="products" required></textarea>
+        <br>
+        <button type="submit">Previsualizar Documento</button>
+    </form>
+</body>
+</html>

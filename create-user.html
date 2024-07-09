@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El gran Poeta</title>
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS login/registro_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="card-registro">
+        <h1>Registro de Usuario</h1>
+        <form action="" id="formulario-registro">
+            <div class="user">
+                <input type="text" placeholder="Email" name="user"/>    
+                <i class="bi bi-person"></i>
+            </div>
+            <span class="error" id="mail-error">ERROR</span>
+            <div class="password">
+                <input type="password" placeholder="Password" name="password"/>
+                <i class="bi bi-eye-slash" id="togglePassword1"></i>
+            </div>
+            <span class="error" id="pass-error">ERROR</span>
+            <div class="password">
+                <input type="password" placeholder="Confirm password" name="password-confirm"/>
+                <i class="bi bi-eye-slash" id="togglePassword2"></i>
+            </div>
+            <span class="error" id="pass-identica">Error</span>
+            <button class="btn-form" type="submit">Iniciar</button>
+        </form>
+    </div>
+    <script src="js/registro.js"></script>
+</body>
+</html>

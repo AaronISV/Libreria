@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Productos - Jefe de Bodega</title>
+    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+</head>
+<body>
+    <h1>Creación de Productos</h1>
+    <form action="/create-product" method="post">
+        <label for="productType">Tipo de Producto:</label>
+        <select id="productType" name="productType">
+            <option value="book">Libro</option>
+            <option value="magazine">Revista</option>
+            <option value="encyclopedia">Enciclopedia</option>
+        </select>
+        <br>
+        <label for="publisher">Editorial:</label>
+        <input type="text" id="publisher" name="publisher" required>
+        <br>
+        <label for="authors">Autores:</label>
+        <input type="text" id="authors" name="authors" required>
+        <br>
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <button type="submit">Crear Producto</button>
+    </form>
+</body>
+</html>

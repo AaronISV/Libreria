@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Bodegas - Jefe de Bodega</title>
+    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+</head>
+<body>
+    <h1>Gestión de Bodegas</h1>
+    <form action="/manage-warehouses" method="post">
+        <label for="action">Acción:</label>
+        <select id="action" name="action">
+            <option value="create">Crear Bodega</option>
+            <option value="modify">Modificar Bodega</option>
+            <option value="delete">Eliminar Bodega</option>
+        </select>
+        <br>
+        <label for="warehouseId">ID de la Bodega:</label>
+        <input type="text" id="warehouseId" name="warehouseId" required>
+        <br>
+        <button type="submit">Ejecutar</button>
+    </form>
+</body>
+</html>
