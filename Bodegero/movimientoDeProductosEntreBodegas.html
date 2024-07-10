@@ -10,23 +10,23 @@
     <h1>Movimiento de Productos entre Bodegas</h1>
     <form action="/move-products" method="post" id="formulario">
         <label for="OrigenBodega">Bodega de Origen:</label>
-        <input type="text" id="OrigenBodega" name="OrigenBodega" required>
+        <input type="text" id="OrigenBodega" name="originWarehouse" required>
         <br>
         <label for="destinoBodega">Bodega de Destino:</label>
-        <input type="text" id="destinoBodega" name="destinoBodega" required>
+        <input type="text" id="destinoBodega" name="destinationWarehouse" required>
         <br>
         <label for="user">Usuario al realizar operacion:</label>
         <input type="text" id="user" name="user" required>
         <br>
-        <label for="producto">producto</label>
-        <input type="text" id="producto" name="producto" required>
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" name="product" required>
         <br>
-        <label for="cantidad">cantidad</label>
-        <input type="text" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="quantity" required>
         <br>
         <button type="submit">Mover Productos</button>
-        <button class="button-volver" type="submit" id="buttonVolver">Volver</button>
     </form>
+    <button id="buttonVolver">Volver</button>
     <script src="BodegeroJS/BodegeroScripnt.js"></script>
 </body>
 </html>

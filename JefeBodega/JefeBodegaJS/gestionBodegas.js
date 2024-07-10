@@ -1,3 +1,19 @@
+console.log("conectando js");
+
+//estructura de bodegas con productos
+//{
+//    bodegaid:{id},
+//    nombre:{nombreBodega},
+//    direccion:{direccionBodega},
+//    productos:[
+//        {
+//            idProducto:{idProducto},
+//            nombreProducto:{nombreProducto},
+//            autorProducto:{autorProducto},
+//            editorialProducto:{editorialProducto}
+//        }
+//    ]
+//}
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
 
