@@ -9,17 +9,24 @@
 <body>
     <h1>Gestión de Bodegas</h1>
     <form action="/manage-warehouses" method="post">
-        <label for="action">Acción:</label>
-        <select id="action" name="action">
-            <option value="create">Crear Bodega</option>
-            <option value="modify">Modificar Bodega</option>
-            <option value="delete">Eliminar Bodega</option>
+        <label for="accion">Acción:</label>
+        <select id="accion" name="accion">
+            <option value="crear">Crear Bodega</option>
+            <option value="modificar">Modificar Bodega</option>
+            <option value="eliminar">Eliminar Bodega</option>
         </select>
         <br>
-        <label for="warehouseId">ID de la Bodega:</label>
-        <input type="text" id="warehouseId" name="warehouseId" required>
+        <label for="bodegaid">Numero de Bodega:</label>
+        <input type="text" id="bodegaid" name="bodegaid" required>
+        <br>
+        <label for="nombrebodega">Nombre de Bodega</label>
+        <input type="text" id="nombrebodega" name="nombrebodega" required>
+        <br>
+        <label for="direccionbodega">Direccion Bodega</label>
+        <input type="text" id="direccionbodega" name="direccionbodega" required>
         <br>
         <button type="submit">Ejecutar</button>
+        <button class="button-volver" type="submit" id="buttonVolver">Volver</button>
     </form>
 </body>
 <script src="JefeBodegaJS/gestionBodegas.js"></script>
