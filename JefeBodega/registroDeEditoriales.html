@@ -8,11 +8,16 @@
 </head>
 <body>
     <h1>Registro de Editoriales</h1>
-    <form action="/register-publisher" method="post">
+    <form action="/register-publisher" method="post" id="formularioEditorial">
         <label for="publisherName">Nombre de la Editorial:</label>
-        <input type="text" id="publisherName" name="publisherName" required>
+        <input type="text" id="nombreEditorial" name="nombreEditorial>
+        <label for="direccionEditorial">Direccion Editorial:</label>
+        <input type="text" id="direccionEditorial" name="direccionEditorial" >
+        <label for="telefonoEditorial">Telefono de la Editorial:</label>
+        <input type="text" id="telefonoEditorial" name="telefonoEditorial" >
         <br>
         <button type="submit">Registrar Editorial</button>
+        <button type="submit" id="gestionEditorial">Gestion Editoriales</button>
     </form>
     <script src="JefeBodegaJS/crearEditorial.js"></script>
 </body>
