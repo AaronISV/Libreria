@@ -1,34 +1,57 @@
-console.log("conectando js");
+document.addEventListener('DOMContentLoaded', () => {
+    // obtener el form por su id
+    const form = document.getElementById('formulario');
 
-const productos = [];
+    //evento del form para enviar datos
+    form.addEventListener('submit', (e) => {
+        //anular recarga de pag
+        e.preventDefault();
 
-const origenBodega = document.querySelector('#origenBodega');
-const destinoBodega = document.querySelector('#destinoBodega');
-const user = document.querySelector('#user');
-const cantidad = document.querySelector('#cantidad')
-const producto = document.querySelector('#producto')
+        //obtener valores del form
+        const origenBodega = document.getElementById('OrigenBodega').value;
+        const destinoBodega = document.getElementById('destinoBodega').value;
+        const user = document.getElementById('user').value;
+        const producto = document.getElementById('producto').value;
+        const cantidad = document.getElementById('cantidad').value;
 
+        //creacion de objeto producto
+        const nuevoProducto = {
+            id: generarNuevoID(),
+            origenBodega: origenBodega,
+            destinoBodega: destinoBodega,
+            user: user,
+            producto: producto,
+            cantidad: cantidad
+        };
 
-const form = document.querySelector('#formulario');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    console.log("haciendo click");
+        //guardar el producto en localStorage
+        guardarProductoEnLocalStorage(nuevoProducto);
 
-    const origenBodega = form['origenBodega'].value;
-    const destinoBodega = form['destinoBodega'].velue;
-    const user = form['user'].value;
-    const producto = form['producto'].value
-    const cantidad = form['cantidad'].value
-    console.log(user, origenBodega, destinoBodega, producto, cantidad);
+        //mostrar el id del movimiento
+        alert(`Producto movido exitosamente! El ID del movimiento es: ${nuevoProducto.id}`);
+        form.reset();
+    });
 
-    if(producto.trim() === ""){
-        alert("campos vacios")
-    } else {
-        try{
-            let storeproductos = JSON.parse(localStorage.getItem('productos')) || [];
-            
-            const pro
+    //funcion generar id incremental
+    function generarNuevoID() {
+        const productos = obtenerProductosDeLocalStorage();
+        if (productos.length === 0) {
+            return 1;
+        } else {
+            return productos[productos.length - 1].id + 1;
         }
     }
 
-})
+    //funcion para guardar productos en localStorage
+    function guardarProductoEnLocalStorage(producto) {
+        const productos = obtenerProductosDeLocalStorage();
+        productos.push(producto);
+        localStorage.setItem('productos', JSON.stringify(productos));
+    }
+
+    //funcion para obtener los productos del localStorage
+    function obtenerProductosDeLocalStorage() {
+        const productos = localStorage.getItem('productos');
+        return productos ? JSON.parse(productos) : [];
+    }
+});
