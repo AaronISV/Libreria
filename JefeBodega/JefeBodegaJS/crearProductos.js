@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tipoProducto,
             Editorial,
             Autores,
-            Descripcion,
-            bodega: ''
+            Descripcion
         };
 
         //agregar producto a lista
