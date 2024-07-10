@@ -25,4 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Renderizar filas para bodegueros
     renderTableRows(bodegueros, 'Bodeguero');
+    const btnVolver = document.getElementById('btnVolver');
+    btnVolver.addEventListener('click', function(e){
+        e.preventDefault()
+        window.location = "gestionDeUsuarios.html"
+    })
 });
