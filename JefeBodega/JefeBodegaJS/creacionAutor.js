@@ -25,14 +25,14 @@ formulario.addEventListener('submit', function(e){
     }
     else{
         let storedAutores = JSON.parse(localStorage.getItem('autores')) || [
-            {user:'pericolospalotes@gmail.com', password: '123456'}
+            {name: 'Perico', user:'pericolospalotes@gmail.com', password: '123456'}
         ];
         const autoresExistentes = storedAutores.find(a => a.user === correoAut);
         if(autoresExistentes){
             alert('Autor ya existe')
         }
         else{
-            storedAutores.push({user:correoAut, password:passAut })
+            storedAutores.push({name:nameAut,user:correoAut, password:passAut })
             localStorage.setItem('autores', JSON.stringify(storedAutores))
             alert('Autor guardado con exito')
             formulario['authorName'].value = "";

@@ -85,3 +85,6 @@ form > div {
 form > div > button {
     width: auto;
 }
+.error{
+    color: red;
+}
