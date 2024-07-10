@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Autores - Jefe de Bodega</title>
-    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+    <link rel="stylesheet" href="../CSS empleados/styleJefeB.css">
 </head>
 <body>
     <h1>Registro de Autores</h1>
-    <form action="/register-author" method="post">
+    <form action="/register-author" method="post" id="formAut">
         <label for="authorName">Nombre del Autor:</label>
-        <input type="text" id="authorName" name="authorName" required>
+        <input type="text" name="authorName" >
+        <span class="error" id="name_error">Error</span>
         <br>
-        <button type="submit">Registrar Autor</button>
+        <label for="authorName">Correo:</label>
+        <input type="text" name="correoAuthor" >
+        <span class="error" id="mailAut_error">Error</span>
+        <br>
+        <label for="authorName">contraseña:</label>
+        <input type="password" name="passAuthor" >
+        <span class="error" id="passAut_error">Error</span>
+        <br>
+        <button class="button-registrar" type="submit">Registrar Autor</button>
+        <button class="button-volver" type="submit" id="buttonVolver">Volver</button>
     </form>
+    <script src="/sesion/js/creacionAutor.js"></script>
 </body>
 </html>
