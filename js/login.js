@@ -11,9 +11,7 @@ const jefesBodega = [
     { user: 'jefebodega@libreria.cl', password: '123' }
 ];
 
-const bodegueros = [
-    { user: 'bodegero@libreria.cl', password: '123' }
-];
+
 
 const user_error = document.querySelector('#mail-error');
 user_error.innerHTML = "";
@@ -41,9 +39,10 @@ form.addEventListener('submit', function(e) {
             // Obtener lista de clientes del localStorage o inicializarla si no existe
             let storedclientes = JSON.parse(localStorage.getItem('clientes')) || [];
             let storedAutores = JSON.parse(localStorage.getItem('autores')) || [];
+            let storedBodeguero = JSON.parse(localStorage.getItem('bodegueros')) || []
             const trabajador = trabajadores.find(t => t.user === user && t.password === password);
             const jefeBodega = jefesBodega.find(j => j.user === user && j.password === password);
-            const bodegero = bodegueros.find(b => b.user === user && b.password === password);
+            const bodeguero = storedBodeguero.find(b => b.user === user && b.password === password);
             const cliente = storedclientes.find(c => c.user === user && c.password === password);
             const autor = storedAutores.find(a => a.user === user && a.password === password)
 
@@ -53,8 +52,8 @@ form.addEventListener('submit', function(e) {
             } else if (jefeBodega) {
                 localStorage.setItem('usuario_tipo', 'jefeBodega');
                 window.location = "jefebodega.html";
-            } else if (bodegero) {
-                localStorage.setItem('usuario_tipo', 'bodegero');
+            } else if (bodeguero) {
+                localStorage.setItem('usuario_tipo', 'bodeguero');
                 window.location = "bodegero.html";
             } else if (cliente) {
                 localStorage.setItem('usuario_tipo', 'cliente');
