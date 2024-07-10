@@ -1,3 +1,5 @@
+console.log("conectando js")
+
 document.addEventListener('DOMContentLoaded', () => {
     // obtener el form por su id
     const form = document.getElementById('formulario');

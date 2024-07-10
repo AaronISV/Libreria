@@ -8,24 +8,25 @@
 </head>
 <body>
     <h1>Creación de Productos</h1>
-    <form action="/create-product" method="post">
-        <label for="productType">Tipo de Producto:</label>
-        <select id="productType" name="productType">
-            <option value="book">Libro</option>
-            <option value="magazine">Revista</option>
-            <option value="encyclopedia">Enciclopedia</option>
+    <form action="/create-product" method="post" id="formulario">
+        <label for="tipoProducto">Tipo de Producto:</label>
+        <select id="tipoProducto" name="tipoProducto">
+            <option value="Libro">Libro</option>
+            <option value="Revista">Revista</option>
+            <option value="Enciclopedia">Enciclopedia</option>
         </select>
         <br>
-        <label for="publisher">Editorial:</label>
-        <input type="text" id="publisher" name="publisher" required>
+        <label for="Editorial">Editorial:</label>
+        <input type="text" id="Editorial" name="Editorial" required>
         <br>
-        <label for="authors">Autores:</label>
-        <input type="text" id="authors" name="authors" required>
+        <label for="Autores">Autores:</label>
+        <input type="text" id="Autores" name="Autores" required>
         <br>
-        <label for="description">Descripción:</label>
-        <textarea id="description" name="description" required></textarea>
+        <label for="Descripcion">Descripción:</label>
+        <textarea id="Descripcion" name="Descripcion" required></textarea>
         <br>
         <button type="submit">Crear Producto</button>
+        <button class="button-volver" type="submit" id="buttonVolver">Volver</button>
     </form>
 </body>
 <script src="JefeBodegaJS/crearProductos.js"></script>
