@@ -48,3 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(productoDiv);
     }
 });
+
+const button_volver = document.getElementById('buttonVolver');
+button_volver.addEventListener('click', function(e){
+    e.preventDefault()
+    console.log('click volver');
+    window.location = "../bodegero.html"
+})
