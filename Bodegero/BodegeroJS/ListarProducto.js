@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+//funcion boton volver
 const button_volver = document.getElementById('buttonVolver');
 button_volver.addEventListener('click', function(e){
     e.preventDefault()
