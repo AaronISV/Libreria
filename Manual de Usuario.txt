@@ -1,0 +1,102 @@
+"MANUAL DE USUARIO"
+  Indice
+    1.Introduccion
+    2.Requisitos de Software
+    3.acceso al sistema
+    4.Funciones para Jefe de Bodega
+      -Creacion de Productos
+      -Gestion de Bodega
+      -Informes
+    5.Funciones para el Bodegero
+      -Movimiento de Productos
+    6.Soporte Tecnico
+
+-----------------------------------------------------------------------------------------  
+
+  Introduccion
+    El sistema de gestion de inventario de "Gran Poeta" permitea la empresa organizar y controlar los productos en sus diferentes bodegas. Este manual de usuario esta disenado para guiar tanto a los jefes de bodega como a los bodegeros en uso eficiente del sistema.
+
+-----------------------------------------------------------------------------------------
+
+  Requisitos de Software
+    -Sistema Operativo: Windows 10 o superior
+    -Navegador: Microsoft Edge 126.0.2592.87 (Compilacion oficial)(64 bits)
+
+-----------------------------------------------------------------------------------------
+
+  Acceso al Sistema
+    1.Ingreso al sistema
+      -Abra el navegador web y dirijase a la url del sistema.
+      -Ingrese su correo y contrasena.
+      -Haga clic en el boton de "Iniciar Sesion".
+
+-----------------------------------------------------------------------------------------
+
+  Funciones para el jefe de bodega
+    Creacion de Productos
+      1.Acceso:
+        -Inicie sesion como jefe de bodega.
+        -Navegue a la seccion "Creacion de productos".
+
+      2.Formulario de Creacion:
+        Complete el formulario con los siguientes campos:
+          -Tipo de Producto: Seleccione entre Libro, Revista o Enciclopedia.
+          -Editorial: Ingrese la editorial del producto.
+          -Autores: Ingrese los autores del producto.
+          -Descripcion: Ingrese una breve descripcion del producto.
+      
+      3.Guardar producto:
+        -Haga clic en el boton "Crear Producto".
+        -El producto sera guardado en el sistema y asignado un ID unico.
+
+    Gestion de Bodegas
+      1.Acceso:
+        -Navegue a la seccion "Gestion de Bodegas".
+      
+      2.Crear Nueva Bodega:
+        -Ingrese el nombre de la nueva bodega.
+        -Haga clic en "Crear bodega".
+    
+    Informes
+      1.Generacion deinformes:
+        -Navegue a la seccion "informes".
+        -Seleccione el tipo de informe que desea generar:
+          -Cantidad de productos por bodega.
+          -Tipos de productos(Libros, Revistas, Enciclopedias).
+          -Productos por bodega y editorial especifica.
+      
+      2.Visualizar informes:
+        -Haga clic en "Generar Informe".
+        -El informe se mostrara en pantalla y podra serdescargado.
+
+-----------------------------------------------------------------------------------------
+
+  Funciones para el Bodegero
+    Movimiento de Productos
+      1.Acceso:
+        -Inicie sesion como Bodegero.
+        -Navege a la seccion "Movimiento de productos".
+      
+      2.Formulario de Movimiento:
+        -Complete el formulario con los siguientes campos:
+          -Bodega de Origen: Ingrese la bodega de origen.
+          -Bodega de Destino: Ingrese la bodega de destino.
+          -Usuario que realiza la operacion: Ingrese su nombre de usuario.
+          -Producto y cantidad: Ingrese el nombre del producto y la cantidad a mover.
+      
+      3.Verificacion y movimiento:
+        -El sistema verificara que las bodegas existen.
+        -Si las bodegas son validas, el sistema actualizara las cantidades de los productos.
+        -Haga clic en "Mover Productos".
+      
+      4.Confirmacion:
+        -El sistema mostrara un mensaje de confirmacion con el ID del movimiento.
+        -El formulario se restablecera para una nueva entrada.
+
+-----------------------------------------------------------------------------------------
+
+  Soporte Tecnico
+    Para cualquier consulta o problema tecnico, por favor contacte al equipo de soporte a traves de :
+      -Email: soporte@libreria.com
+
+-----------------------------------------------------------------------------------------

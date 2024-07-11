@@ -1,0 +1,51 @@
+"Terminos y condiciones de uso"
+  1.Introduccion
+    -Estos Terminos y condiciones de uso rigen el uso del sistema de gestion de inventario de "El gran Poeta". Al acceder o utilizar el sistema, usted acepta estar sujeto a estos Terminos. Si no esta de acuerdo con estos Terminos, NO debe utilizar el sistema.
+
+  2.Definiciones
+    -Sistema: La plataforma de software desarrollada para gestionar el inventario de productos de "El gran Poeta".
+    -Usuario: Cualquier persona que accede y utiliza el Sistema.
+    -Jefe de bodega: Usuaeio con permisos para crear y gestionar productos y bodegas, asi como generar informes.
+    -Bodegero: Usuario con permisos para realizar movimientos de productos entre bodegas.
+    -Producto: Articulo registrado en el inventario, que puede ser un libro, revista o enciclopedia.
+    -Bodega: Lugar fisico o virtual donde se almacenan productos.
+  
+  3.Acceso y uso del sistema
+    3.1 Requisitos de Usuario
+          para utilizar el Sistema, debe de ser un empleado autorizado de "El gran Poeta" con las credenciales de inicio de sesion proporcionadas por la empresa. Es responsabilidad del usuario mantener la confidencialidad de sus credenciales.
+    3.2 Restricciones de uso
+          -NO debe utilizar el sistema para ningun propocito ilegal o no autorizado.
+          -NO debe intentar obtener acceso no autorizado al sistema, servidores o bases de datos.
+          -NO debe modificar, adaptar o hackear el sistema o modificar otro sitio web para implicar falsamente que esta asociado con el sistema.
+
+  4.Roles y responsabilidad
+    4.1 Jefe de bodega
+          -Crear y gestionar productos y bodegas.
+          -Generar y revisar informes de inventario y movimientos de productos.
+          -Asegurar la precision y actualizacion de los cambios en el sistema.
+    4.2 Bodegero
+          -Realizar movimientos de productos entre bodegas.
+          -Verificar que las bodegas de origen y destino existen antes de realizar movimientos.
+          -Mantener registros precisos de los movimientos realizados.
+
+  5.Gestion de datos
+    5.1 Privacidad y seguridad
+          -"El gran Poeta" se compromete a proteger la privacidad de los datos almacenados en el sistema. Los datos seran utilizados exclusivamente para la gestion del inventario y no seran compartidos con terceros sin el consentimiento adecuado.
+    5.2 Exatitud de la informacion
+          -Los usuarios son responsables de la exatitud de la informacion ingresada en el sistma. "El gran poeta" no se hace responsable por errores o inconsistencias en los datos proporcionados por los usuarios.
+
+  6.Limitacion de Responsabilidad
+    "El gran Poeta" no sera responsable por cualquier dano directo, indirecto, incidental, especial o consecuente que resulte del uso o la imposibilidad de usar el sistema, incluyendo pero no limitando a danos por perdida de beneficios, uso, datos u otra perdidas intangibles.
+
+  7.Modificaciones al sistema y a los terminos
+    "El gran Poeta" se reserva el derecho de modificar o descontinuar el sistema, temporal o permanentemente, con o sin previo aviso. Tambien nos reservamos el derecho de actualizar estos terminos en cualquier momento. Las modificaciones seran efectivas inmediatamente despues de su publicacion en el sistema.
+  
+  8.Terminacion
+    "El gran Poeta" puede suspender o terminar su acceso al sistema en cualquier momento, con o sin causa, con o sin previo aviso, y sin responsabilidad para con usted.
+
+  9.Ley aplicable
+    Estos terminos de regiran e interpretaran de acuerdo con las leyes del pais donde "El gran Poeta" tiene su sede principal, sin dar efecto a ningun principio de conflictos de leyes.
+
+  10.contacto
+    para cualquier consulta o problematica relacionado con estos terminos o el uso del sistema, por favor contacte al equipo de soporte de "El gran Poeta":
+      -Email: soporte@libreria.com
