@@ -30,9 +30,9 @@ header {
     height: 800px;
     background: #000000;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 0%, 0.664)), url(../img/portd.jpeg);
+    background: -webkit-linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 0%, 0.664)), url(../img/ilustracion2.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 0%, 0.664)), url(../img/portd.jpeg);
+    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 0%, 0.664)), url(../img/ilustracion2.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -186,7 +186,7 @@ main .sobre-nosotros{
 }
 
 .cards .card{
-    background: #007bff;
+    background: #808080;
     display: flex;
     width: 46%;
     height: 200px;
