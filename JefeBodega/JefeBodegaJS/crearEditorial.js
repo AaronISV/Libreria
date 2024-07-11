@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded',function(){
     const btnGestion = document.querySelector('#gestionEditorial');
     btnGestion.addEventListener('click', function(e){
         e.preventDefault();
-        window.location = "revisionEditoriales.html"
+        window.location = "revisionEditoriales.html";
 
     });
+    const btnVolver = document.getElementById('volver');
+    btnVolver.addEventListener('click', function(e){
+        e.preventDefault();
+        window.location = "../jefebodega.html";
+    })
 })
