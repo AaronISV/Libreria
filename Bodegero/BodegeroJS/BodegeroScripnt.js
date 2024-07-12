@@ -1,90 +1,97 @@
 console.log("conectando js");
-//DOM se carga cuando el html a sido cargado por completo
+
+// DOM se carga cuando el HTML ha sido cargado por completo
 document.addEventListener('DOMContentLoaded', () => {
-    //obtener el form por su id
+    // Obtener el formulario por su ID
     const form = document.getElementById('formulario');
 
-    //evento del form para enviar datos
+    // Evento del formulario para enviar datos
     form.addEventListener('submit', (e) => {
-        //anular recarga de pag
+        // Anular recarga de página
         e.preventDefault();
 
-        //obtener valores del form
-        const origenBodega = document.getElementById('OrigenBodega').value;
-        const destinoBodega = document.getElementById('destinoBodega').value;
-        const user = document.getElementById('user').value;
-        const producto = document.getElementById('producto').value;
-        const cantidad = parseInt(document.getElementById('cantidad').value);
+        // Obtener valores del formulario
+        const origenBodegaNombre = document.getElementById('OrigenBodega').value.trim();
+        const destinoBodegaNombre = document.getElementById('destinoBodega').value.trim();
+        const user = document.getElementById('user').value.trim();
+        const productoNombre = document.getElementById('producto').value.trim();
+        const cantidad = parseInt(document.getElementById('cantidad').value.trim());
 
-        //obtener lista de bodegas y productos desde localStorage
-        let bodegas = JSON.parse(localStorage.getItem('warehouses')) || [];
-        let productos = JSON.parse(localStorage.getItem('products')) || [];
+        // Obtener lista de bodegas desde localStorage
+        let bodegas = JSON.parse(localStorage.getItem('bodegas')) || [];
 
-        //verificar si las bodegas existen
-        const bodegaOrigenExiste = bodegas.some(bodega => bodega.name === origenBodega);
-        const bodegaDestinoExiste = bodegas.some(bodega => bodega.name === destinoBodega);
+        // Verificar si las bodegas existen
+        const bodegaOrigen = bodegas.find(b => b.nombre === origenBodegaNombre);
+        const bodegaDestino = bodegas.find(b => b.nombre === destinoBodegaNombre);
 
-        if (!bodegaOrigenExiste) {
+        if (!bodegaOrigen) {
             alert('La bodega de origen no existe.');
             return;
         }
 
-        if (!bodegaDestinoExiste) {
+        if (!bodegaDestino) {
             alert('La bodega de destino no existe.');
             return;
         }
 
-        //encontrar el producto en la bodega de origen
-        let productoOrigen = productos.find(p => p.name === producto && p.bodega === origenBodega);
+        // Encontrar el producto en la bodega de origen
+        let productoOrigen = bodegaOrigen.productos.find(p => p.nombre === productoNombre);
 
         if (!productoOrigen || productoOrigen.cantidad < cantidad) {
             alert('No hay suficiente cantidad del producto en la bodega de origen.');
             return;
         }
 
-        //reducir la cantidad en la bodega de origen
+        // Reducir la cantidad en la bodega de origen
         productoOrigen.cantidad -= cantidad;
 
-        //encontrar el producto en la bodega de destino
-        let productoDestino = productos.find(p => p.name === producto && p.bodega === destinoBodega);
+        // Encontrar o crear el producto en la bodega de destino
+        let productoDestino = bodegaDestino.productos.find(p => p.nombre === productoNombre);
 
         if (productoDestino) {
-            //aumentar la cantidad en la bodega de destino
+            // Aumentar la cantidad en la bodega de destino
             productoDestino.cantidad += cantidad;
         } else {
-            //crear el producto en la bodega de destino
-            productos.push({
+            // Crear el producto en la bodega de destino con la cantidad especificada
+            bodegaDestino.productos.push({
                 id: productoOrigen.id,
-                name: productoOrigen.name,
-                tipoProducto: productoOrigen.tipoProducto,
-                Editorial: productoOrigen.Editorial,
-                Autores: productoOrigen.Autores,
-                Descripcion: productoOrigen.Descripcion,
-                cantidad: cantidad,
-                bodega: destinoBodega
+                nombre: productoOrigen.nombre,
+                cantidad: cantidad
             });
         }
 
-        //guardar la lista actualizada de productos en localStorage
-        localStorage.setItem('products', JSON.stringify(productos));
+        // Guardar la lista actualizada de bodegas en localStorage
+        localStorage.setItem('bodegas', JSON.stringify(bodegas));
 
-        alert(`Producto movido exitosamente! El ID del movimiento es: ${productoOrigen.id}`);
+        // Registrar el movimiento
+        registrarMovimiento({
+            id: Date.now(), // Usar timestamp como ID único
+            origen: origenBodegaNombre,
+            destino: destinoBodegaNombre,
+            producto: productoNombre,
+            cantidad: cantidad,
+            usuario: user,
+            fecha: new Date().toLocaleString()
+        });
+
+        alert(`Producto movido exitosamente!`);
         form.reset();
     });
 
-    //trae los productos del localstrage
-    function obtenerProductosDeLocalStorage() {
-        const productos = localStorage.getItem('productos');
-        return productos ? JSON.parse(productos) : [];
+    // Función para registrar el movimiento en localStorage
+    function registrarMovimiento(movimiento) {
+        let movimientos = JSON.parse(localStorage.getItem('movimientos')) || [];
+        movimientos.push(movimiento);
+        localStorage.setItem('movimientos', JSON.stringify(movimientos));
+    }
+
+    // Función botón volver
+    const button_volver = document.getElementById('buttonVolver');
+    if (button_volver) {
+        button_volver.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('click volver');
+            window.location.href = "../bodegero.html";
+        });
     }
 });
-
-//funcion botn volver
-const button_volver = document.getElementById('buttonVolver');
-if (button_volver) {
-    button_volver.addEventListener('click', function(e){
-        e.preventDefault();
-        console.log('click volver');
-        window.location.href = "../bodegero.html";
-    });
-}

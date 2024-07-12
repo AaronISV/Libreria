@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Productos a Bodegas - Jefe de Bodega</title>
+    <link rel="stylesheet" href="../CSS empleados/estilos.css">
+</head>
+<body>
+    <h1>Ingreso de Productos a Bodegas</h1>
+    <form id="ingresoForm">
+        <label for="bodega">Seleccione Bodega:</label>
+        <select id="bodega" name="bodega" required>
+            <!-- Opciones se llenarán dinámicamente -->
+        </select>
+        <br>
+        <label for="producto">Seleccione Producto:</label>
+        <select id="producto" name="producto" required>
+            <!-- Opciones se llenarán dinámicamente -->
+        </select>
+        <br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+        <br>
+        <button type="submit">Agregar Producto</button>
+        <button class="button-volver" type="submit" id="buttonVolver">Volver</button>
+    </form>
+
+    <script src="BodegeroJS/ingresarProductos.js"></script>
+</body>
+</html>

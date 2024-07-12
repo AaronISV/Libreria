@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
             createOption.disabled = false;
             
         }
-        
-
     });
+
     crearForm.addEventListener('submit', function(e){
         e.preventDefault()
         const nameUser = crearForm['nameUser'].value;
@@ -80,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
         }, 2000);
     });
+    
     modificarForm.addEventListener('submit', function(e){
         e.preventDefault()
         const lista = listaUser.value;

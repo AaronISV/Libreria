@@ -21,7 +21,6 @@ function cargarTabla() {
             <td>${element.Descripcion}</td>
             <td>
                 <a class='btn btn-danger' onclick='eliminarProducto(${indice})'><i class="bi bi-trash"></i></a>
-                <a class='btn btn-warning' href='edit.html?id=${element.id}'><i class="bi bi-pencil-square"></i></a>
             </td>
         `;
 

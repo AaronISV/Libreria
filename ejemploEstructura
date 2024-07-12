@@ -1,0 +1,40 @@
+// Ejemplo de estructura de bodega
+let bodegas = [
+    {
+        id: '1',
+        nombre: 'Bodega Central',
+        direccion: 'Calle Falsa 123',
+        productos: [
+            { id: '1', nombre: 'Producto A', cantidad: 10 },
+            { id: '2', nombre: 'Producto B', cantidad: 5 }
+        ]
+    },
+    // Más bodegas...
+];
+
+// Ejemplo de estructura de producto
+let productos = [
+    {
+        id: '1',
+        nombre: 'Producto A',
+        tipoProducto: 'Tipo A',
+        Editorial: 'Editorial A',
+        Autores: 'Autor A',
+        Descripcion: 'Descripción del producto A',
+        cantidad: 100
+    },
+    {
+        id: '2',
+        nombre: 'Producto B',
+        tipoProducto: 'Tipo B',
+        Editorial: 'Editorial B',
+        Autores: 'Autor B',
+        Descripcion: 'Descripción del producto B',
+        cantidad: 50
+    },
+    // Más productos...
+];
+
+// Guardar en localStorage
+localStorage.setItem('bodegas', JSON.stringify(bodegas));
+localStorage.setItem('products', JSON.stringify(productos));
